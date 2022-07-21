@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+testIgnore/
 
 # BlueJ files
 *.ctxt
