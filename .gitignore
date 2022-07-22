@@ -4,6 +4,11 @@
 # Log file
 *.log
 testIgnore/
+Projects/
+
+# idea
+.idea
+*.iml
 
 # BlueJ files
 *.ctxt
