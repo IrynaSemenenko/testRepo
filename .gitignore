@@ -3,7 +3,12 @@
 
 # Log file
 *.log
-testIgnore/
+
+out/
+
+# idea
+.idea
+*.iml
 
 # BlueJ files
 *.ctxt
