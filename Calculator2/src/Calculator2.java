@@ -12,7 +12,6 @@ public class Calculator2 {
 
             System.out.println("Enter an operation (for example: +, -, *, /, %)");
             String operation = sc.next();
-            System.out.println(operation);
             switch (operation) {
                 case "+", "-", "*", "/", "%" -> System.out.println("User inputs supported operations");
                 default -> System.out.println("User inputs unsupported operations (should be: +, -, *, /, %)");
@@ -33,6 +32,9 @@ public class Calculator2 {
                         System.out.println("Result is: " + result2);
                     }
                     case "/" -> {
+                        if (firstValue == 0 | secondValue == 0) {
+                            System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
+                        }
                         double result3 = firstValue / secondValue;
                         System.out.println("Result is: " + result3);
                     }
@@ -41,10 +43,13 @@ public class Calculator2 {
                         System.out.println("Result is: " + result4);
                     }
                     case "%" -> {
+                        if (firstValue == 0 | secondValue == 0) {
+                            System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
+                        }
                         double result5 = firstValue % secondValue;
                         System.out.println("Result is: " + result5);
                     }
-                    default -> System.out.println("Something is wrong");
+                    default -> System.out.println("Something is wrong. You may have entered an invalid operation");
                 }
             } else {
                 System.out.println("Input is wrong (should be a number)");
@@ -53,5 +58,4 @@ public class Calculator2 {
             System.out.println("Input is wrong (should be a number)");
         }
     }
-
 }
