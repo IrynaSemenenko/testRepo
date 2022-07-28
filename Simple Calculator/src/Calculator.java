@@ -23,6 +23,23 @@ public class Calculator {
                 if (sc.hasNextDouble()) {
                     double secondValue = sc.nextDouble();
                     System.out.println("Input is correct: " + secondValue);
+                    if (operation.equals("+")) {
+                        double result = firstValue + secondValue;
+                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                    } else if (operation.equals("-")) {
+                        double result = firstValue - secondValue;
+                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                    } else if (operation.equals("*")) {
+                        double result = firstValue * secondValue;
+                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                    } else if (operation.equals("/")) {
+                        double result = firstValue / secondValue;
+                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                    } else if (operation.equals("%")) {
+                        double result = firstValue % secondValue;
+                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                    }
+
                 } else {
                     System.out.println("Input is wrong (should be a number)");
                 }
