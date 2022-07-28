@@ -16,7 +16,7 @@ public class Calculator {
                     operation.equals("-") |
                     operation.equals("*") |
                     operation.equals("/") |
-                    operation.equals("%") ) {
+                    operation.equals("%")) {
                 System.out.println("User inputs supported operations");
 
                 System.out.println("Enter the second number");
@@ -33,13 +33,20 @@ public class Calculator {
                         double result = firstValue * secondValue;
                         System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                     } else if (operation.equals("/")) {
-                        double result = firstValue / secondValue;
-                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                        if (firstValue == 0 | secondValue == 0) {
+                            System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
+                        } else {
+                            double result = firstValue / secondValue;
+                            System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                        }
                     } else if (operation.equals("%")) {
-                        double result = firstValue % secondValue;
-                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                        if (firstValue == 0 | secondValue == 0) {
+                            System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
+                        } else {
+                            double result = firstValue % secondValue;
+                            System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
+                        }
                     }
-
                 } else {
                     System.out.println("Input is wrong (should be a number)");
                 }
